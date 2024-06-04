@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vf1mcok7e-python-gitops
+  description: This is GitOps manifest for vf1mcok7e-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: vf1mcok7e-python
+    janus-idp.io/tekton: vf1mcok7e-python 
+    backstage.io/kubernetes-id: vf1mcok7e-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vf1mcok7e-python
